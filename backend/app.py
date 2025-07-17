@@ -150,6 +150,10 @@ def analyze_complexity():
 @app.route('/health', methods=['GET'])
 def health_check():
     return jsonify({'status': 'healthy', 'message': 'Time Complexity Estimator API is running'})
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({'message': 'Welcome to the Time Complexity Estimator API. Use /analyze to POST code and /health to check status.'})
+
 
 if __name__ == '__main__':
     # Check if API key is configured
